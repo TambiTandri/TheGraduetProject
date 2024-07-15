@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboardfragment.DashboardFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/menu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_menu_24"
+                android:layout_gravity="start"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:id="@+id/tvd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendaftaran Online Wisuda"
+                android:textSize="20sp"
+                android:textColor="@color/gray"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_logout_24"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/abld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvdm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard Mahasiswa"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="24sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvsd"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvdm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvsd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selamat Datang Yaman NurTria Tambi Tandri"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="24sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clpw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/cvsd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/cvFcIjazahSma"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvpw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Persyaratan Wisuda"
+                    android:textColor="@color/black"
+                    android:textStyle="bold|normal"
+                    android:textSize="24sp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFcIjazahSma"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/clpw"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFcBerwarna"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FotoCopy Berwarna Ijazah SMA"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFcAkteLahir"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cvFcIjazahSma"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFcBerwarnaAkte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FotoCopy Berwarna Akte \nKelahiran"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFcKK"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cvFcAkteLahir"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFcBerwarnaKK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FotoCopy Berwarna Kartu \nKeluarga"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFcKTP"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cvFcKK"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFcBerwarnaKTP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FotoCopy Berwarna KTP yang \nberlaku (diperbesar 4 kali)"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFcKTM"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cvFcKTP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFcBerwarnaKTM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FotoCopy Berwarna KTM yang \nberlaku (diperbesar 4 kali)"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPasFoto"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cvFcKTM"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvPasFoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pas Foto Berwarna"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSkl"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cvPasFoto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSkl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Surat Keterangan Kelulusan \n(SKL)"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSertifToeic"
+                android:layout_width="370dp"
+                android:layout_height="80dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cvSkl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_close_red_24"/>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDone8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_check_24"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSertifToec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sertifikasi TOEIC"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintStart_toEndOf="@id/linearLayout8"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© Copyright 2023. All Rights Reserved"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/biru"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/cvSertifToeic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

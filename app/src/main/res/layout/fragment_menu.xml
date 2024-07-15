@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    tools:context=".ui.menu.MenuFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_close_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textStyle="bold"
+        android:textColor="@color/biru"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/btnClose"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPersyaratan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Persyaratan"
+        android:textStyle="bold"
+        android:textColor="@color/biru"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tvHome"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textColor="@color/biru"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPersyaratan"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVideoTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Video Tutorial"
+        android:textStyle="bold"
+        android:textColor="@color/biru"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

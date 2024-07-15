@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">The Graduate Mobile</string>
+    <string name="home">Home</string>
+    <string name="THE_GRADUATE">THE GRADUATE</string>
+    <string name="persyaratan">Persyaratan</string>
+    <string name="Pendaftaran_wisuda_YARSI">Pendaftaran Wisuda \n UNIVERSITAS YARSI</string>
+    <string name="Button_Daftar_Masuk">Daftar Wisuda -></string>
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="pilih_program_studi">Pilih Program Studi</string>
+    <string name="pembimbing_ilmu">Pembimbing Ilmu</string>
+    <string name="pembimbing_agama">Pembimbing Agama</string>
+    <string name="pendaftaran_wisuda">Pendaftaran Wisuda</string>
+    <string name="YARSI">Universitas YARSI</string>
+    <string name="Program_Studi">Program Studi</string>
+    <string name="Wisudawan">Wisudawan</string>
+    <string name="Alumni">Alumni</string>
+    <string name="FotoCopy_Ijazah">FotoCopy Berwarna Ijazah SMA</string>
+    <string name="FotoCopy_Akte_Kelahiran">FotoCopy Berwarna Akte \nKelahiran</string>
+    <string name="FotoCopy_KK">FotoCopy Berwarna Kartu \nKeluarga</string>
+    <string name="FotoCopy_KTP">FotoCopy Berwarna KTP yang \nberlaku (diperbesar 4 kali)</string>
+    <string name="Pas_Foto">Pas Foto Berwarna</string>
+    <string name="SKL">Surat Keterangan Kelulusan \n(SKL)</string>
+    <string name="TOEIC">Sertifikasi TOEIC</string>
+    <string name="Caption_Home">The Graduate adalah sebuah perangkat lunak berbasis website yang dirancang khusus untuk memberikan kemudahan kepada mahasiswa FTI YARSI dalam proses pengumpulan data pendaftaran Wisuda. Platform ini membantu mahasiswa untuk dengan mudah mengumpulkan informasi penting yang dibutuhkan, sehingga mengurangi beban administratif di tengah kesibukan akademis.</string>
+    <string name="CONTACT_US">CONTACT US</string>
+    <string name="Alamat_Yarsi">Menara Yarsi, Kav. 13, Jl. Let. Jend. Supranto. \nCempaka Putih, Jakarta Pusat, DKI Jakarta. Indonesia. \n10510</string>
+    <string name="Phone">Phone: </string>
+    <string name="Phone_number"> +62 (21) 4206675</string>
+    <string name="Email">Email </string>
+    <string name="registrar">registrar@yarsi.ac.id</string>
+    <string name="Fax">Fax: </string>
+    <string name="Fax_Number">+62 (21) 4243171</string>
+    <string name="dosenPenguji">Dosen Penguji</string>
+    <string name="kirim">Kirim</string>
+    <string name="vidioTutor">Vidio Tutor</string>
+</resources>

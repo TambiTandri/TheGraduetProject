@@ -1,0 +1,2044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.biodatapendaftaran.BiodataPendaftaranFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablpi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/menups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_menu_24"
+                android:layout_gravity="start"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:id="@+id/tvps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendaftaran Online Wisuda"
+                android:textSize="20sp"
+                android:textColor="@color/gray"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/logoutps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_logout_24"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/ablpi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvdmpi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pendaftaran_wisuda"
+                android:textColor="@color/black"
+                android:textStyle="normal|bold"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvsd"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                app:cardElevation="12dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvdmpi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvfi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Form Pendaftaran Wisuda"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/shfotoprofil"
+                        android:src="@drawable/ic_foto_profil"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvfi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvnpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="NPM"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/shfotoprofil"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/npm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvnpm"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        android:enabled="false"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="NPM"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputNPM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvnik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="NIK"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/npm"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvnik"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="NIK"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputNIK"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvnama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Nama Mahasiswa"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nik"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvnama"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Nama Mahasiswa"
+                        android:enabled="false"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvtempatlahir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Tempat Lahir"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nama"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tempatlahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvtempatlahir"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Tempat Lahir">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputtempatlahir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvtanggallahir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Tanggal Lahir"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tempatlahir"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tanggallahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvtanggallahir"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/baseline_calendar_today_24"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="dd/mm/yyyy">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputTanggallahir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvjeniskelamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Jenis Kelamin"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tanggallahir"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/jeniskelamin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvjeniskelamin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/autoc_jenis_kelamin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/jenis_kelamin"
+                            android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvalamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Alamat"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/jeniskelamin"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvalamat"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Alamat">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputAlamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Email"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/alamat"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Email">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvhandphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Handphone"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/email"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/handphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvhandphone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Handphone">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputhandphone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvtelpon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Telpon"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/handphone"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/Telpon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvtelpon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Telpon">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputtelpon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvprodi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Program Studi"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Telpon"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/prodi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvprodi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/inputprodi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pilih_program_studi"
+                            android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvtotalsks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Total SKS"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/prodi"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/totalsks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvtotalsks"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Total SKS">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputtotalsks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvipk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="IPK"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/totalsks"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ipk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvipk"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="IPK">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputipk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvjudulskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Judul Skripsi"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ipk"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/judulskripsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvjudulskripsi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Judul Skripsi">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputjudulskripsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvSemester"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Semester"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/judulskripsi"
+                            tools:ignore="TextSizeCheck" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/semester"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tvSemester"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:boxCornerRadiusBottomEnd="16dp"
+                            app:boxCornerRadiusBottomStart="16dp"
+                            android:padding="10dp"
+                            app:boxCornerRadiusTopEnd="16dp"
+                            app:boxCornerRadiusTopStart="16dp"
+                            android:layout_marginTop="0dp"
+                            android:focusable="false"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:hint="Semester">
+                            <AutoCompleteTextView
+                                android:id="@+id/inputSemester"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAcademicYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Tahun Ajaran"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/semester"
+                            tools:ignore="TextSizeCheck" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/academicYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tvAcademicYear"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:boxCornerRadiusBottomEnd="16dp"
+                            app:boxCornerRadiusBottomStart="16dp"
+                            android:padding="10dp"
+                            app:boxCornerRadiusTopEnd="16dp"
+                            app:boxCornerRadiusTopStart="16dp"
+                            android:layout_marginTop="0dp"
+                            android:focusable="false"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:hint="Tahun Ajaran">
+                            <AutoCompleteTextView
+                                android:id="@+id/inputAcademicYear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvpembimbingilmu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Pembimbing Ilmu"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/academicYear"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/pembimbingilmu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvpembimbingilmu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        android:focusable="false"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"                        >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/inputpembimbingilmu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pembimbing_ilmu"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvDosenPenguji"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Dosen Penguji"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pembimbingilmu"
+                            tools:ignore="TextSizeCheck" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/dosenPenguji"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tvDosenPenguji"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:boxCornerRadiusBottomEnd="16dp"
+                            app:boxCornerRadiusBottomStart="16dp"
+                            android:padding="10dp"
+                            android:focusable="false"
+                            app:boxCornerRadiusTopEnd="16dp"
+                            app:boxCornerRadiusTopStart="16dp"
+                            android:layout_marginTop="0dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/inputDosenPenguji"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/dosenPenguji"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvpembimbingagama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Pembimbing Agama"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dosenPenguji"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/pembimbingagama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvpembimbingagama"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        android:focusable="false"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"                        >
+                        <AutoCompleteTextView
+                            android:id="@+id/inputpembimbingagama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pembimbing_agama"
+                            android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvtgllulus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Tanggal Lulus"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pembimbingagama"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tgllulus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvtgllulus"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/baseline_calendar_today_24"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="dd/mm/yyyy" >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputtgllulus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvtglwisuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Tanggal Wisuda"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tgllulus"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tglwisuda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvtglwisuda"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/baseline_calendar_today_24"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="dd/mm/yyyy">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputtglwisuda"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:padding="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/constraint1"
+                            android:id="@+id/constraint2"
+                            >
+                            <TableLayout
+                                android:id="@+id/tableLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:stretchColumns="*"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/outline"
+                                        android:text="Dokument"
+                                        android:gravity="center"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Aksi"
+                                        android:background="@drawable/outline"
+                                        android:gravity="center"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcIjazah"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcIjazah"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna Ijazah\n SMA"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcAkte"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcAkte"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna Akta\n Kelahiran"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton2"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile2"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcKK"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcKK"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna Kartu\n Keluarga"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton3"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile3"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                   <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcKTP"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcKTP"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Fotocopy Berwarna KTP\n berlaku(diperbesar 4 kali)"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton4"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile4"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcKTM"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcKTM"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna KTM\n berlaku(diperbesar 4 kali)"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcPasFoto"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcPasFoto"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Pas Foto\n Berwarna"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton6"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton6"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile6"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcSKL"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcSKL"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Surat Keterangan Kelulusan(SKL)"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton7"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile7"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+<!--                                    <TextView-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_weight="2"-->
+<!--                                        android:text="Sertifikat\n TOEIC"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:background="@drawable/outline"-->
+<!--                                        android:textSize="16sp" />-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcTOEIC"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcTOEIC"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Sertifikat\n TOEIC"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton8"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton8"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile8"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:layout_width="0dp"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_weight="2"-->
+                                    <!--                                        android:text="Sertifikat\n TOEIC"-->
+                                    <!--                                        android:gravity="center"-->
+                                    <!--                                        android:background="@drawable/outline"-->
+                                    <!--                                        android:textSize="16sp" />-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcSkripsi"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcSkripsi"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="File\nSkripsi"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton9"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton9"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile9"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:layout_width="0dp"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_weight="2"-->
+                                    <!--                                        android:text="Sertifikat\n TOEIC"-->
+                                    <!--                                        android:gravity="center"-->
+                                    <!--                                        android:background="@drawable/outline"-->
+                                    <!--                                        android:textSize="16sp" />-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseLembarPengesahan"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckLembarPengesahan"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Lembar\nPengesahan"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+
+                                        <Button
+                                            android:id="@+id/uploadButton10"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:text="Upload"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:background="@drawable/button_background"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <Button
+                                            android:id="@+id/deleteButton10"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile10"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+                            </TableLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnsimpan"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="Simpan"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/biru"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/constraint2"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnKirimPendaftaran"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kirim Pendaftaran"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/hijau"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/constraint2"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copyright © 2023. All Rights Reserved"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/biru"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/cvsd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_Register"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
